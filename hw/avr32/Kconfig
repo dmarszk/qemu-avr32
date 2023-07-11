@@ -70,6 +70,7 @@ config NANOMIND_A3200
     select AT32UC3_SPI
     select AT32UC3_TWI
     select AT32UC3_TIMER
+    select AT32UC3_WDT
     select SSI_M25P80
     select MPU3300
     select HMC5843
@@ -79,3 +80,4 @@ config NANOMIND_A3200
     select GSSB_ISTAGE
     select FM33256B
     select NANOPOWER_P31U
+    select UNIMP

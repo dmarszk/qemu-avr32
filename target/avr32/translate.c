@@ -1724,6 +1724,7 @@ static bool trans_LDDPC_rd(DisasContext *ctx, arg_LDDPC_rd *a)
         ctx->base.is_jmp = DISAS_JUMP;
     }
     ctx->base.pc_next += 2;
+//    printf("trans_LDDPC_rd exiting - ctx->base.pc_next: 0x%08x\n", ctx->base.pc_next);
     return true;
 }
 

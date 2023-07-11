@@ -35,6 +35,7 @@ static void avr32_cpu_disas_set_info(CPUState *cpu, disassemble_info *info)
 {
     printf("[AVR32-DISAS] avr32_cpu_disas_set_info\n");
     info->mach = bfd_arch_avr32;
+    info->print_insn = avr32_print_insn;
 }
 
 static void avr32a_cpu_init(Object* obj)

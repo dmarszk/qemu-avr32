@@ -26,6 +26,7 @@
 #include "hw/avr32/avr32uc.h"
 #include "hw/ssi/at32uc3_spi.h"
 #include "hw/timer/at32uc3_timer.h"
+#include "hw/watchdog/at32uc3_wdt.h"
 #include "hw/avr32/at32uc3_twim.h"
 #include "hw/avr32/at32uc3_twis.h"
 #include "hw/avr32/at32uc3_pdca.h"
@@ -34,6 +35,7 @@
 #include "hw/avr32/at32uc3_can.h"
 #include "hw/avr32/at32uc3_scif.h"
 #include "hw/avr32/at32uc3_intc.h"
+#include "hw/misc/unimp.h"
 
 #define AT32UC3C_MAX_SPIS 2
 #define AT32UC3C_MAX_TWI 3
@@ -70,6 +72,7 @@ struct AT32UC3CSocState {
 
     AT32UC3SPIState spi[AT32UC3C_MAX_SPIS];
     AT32UC3TIMERState timer;
+    AT32UC3WDTState wdt;
     AT32UC3TWIMState twim[AT32UC3C_MAX_TWI];
     AT32UC3TWISState twis[AT32UC3C_MAX_TWI];
     AT32UC3PDCAState pdca;
